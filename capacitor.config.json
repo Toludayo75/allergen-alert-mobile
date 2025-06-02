@@ -1,0 +1,6 @@
+{
+  "appId": "com.yourname.allergenalert",
+  "appName": "Allergen Alert",
+  "webDir": "dist/public",
+  "bundledWebRuntime": false
+}

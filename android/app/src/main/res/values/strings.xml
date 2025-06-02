@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Allergen Alert</string>
+    <string name="title_activity_main">Allergen Alert</string>
+    <string name="package_name">com.yourname.allergenalert</string>
+    <string name="custom_url_scheme">com.yourname.allergenalert</string>
+</resources>

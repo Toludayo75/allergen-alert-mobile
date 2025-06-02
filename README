@@ -1,0 +1,46 @@
+📁 Allergen Alert App
+├── 📁 client/                      # Frontend (React + TypeScript)
+│   ├── 📁 src/
+│   │   ├── 📁 assets/              # Static assets (allergen icons)
+│   │   │   └── allergens.ts
+│   │   ├── 📁 components/          # Reusable UI components
+│   │   │   ├── 📁 layout/          # Layout components
+│   │   │   │   ├── AppLayout.tsx
+│   │   │   │   ├── BottomNavigation.tsx
+│   │   │   │   └── MobilePageTransition.tsx
+│   │   │   └── 📁 ui/              # UI component library (40+ components)
+│   │   │       ├── allergen-card.tsx
+│   │   │       ├── product-card.tsx
+│   │   │       ├── button.tsx
+│   │   │       └── ... (other shadcn/ui components)
+│   │   ├── 📁 hooks/               # Custom React hooks
+│   │   │   ├── use-auth.ts
+│   │   │   ├── use-allergens.ts
+│   │   │   └── use-products.ts
+│   │   ├── 📁 lib/                 # Utilities & configuration
+│   │   │   ├── queryClient.ts
+│   │   │   └── utils.ts
+│   │   ├── 📁 pages/               # All application pages
+│   │   │   ├── HomePage.tsx
+│   │   │   ├── AdminPage.tsx
+│   │   │   ├── LoginPage.tsx
+│   │   │   ├── AllergenManagementPage.tsx
+│   │   │   └── ... (15+ page components)
+│   │   ├── App.tsx                 # Main React app with routing
+│   │   ├── main.tsx                # React entry point
+│   │   └── index.css               # Global styles
+│   └── index.html                  # HTML template
+├── 📁 server/                      # Backend (Express.js + TypeScript)
+│   ├── index.ts                    # Server entry point
+│   ├── routes.ts                   # API endpoints
+│   ├── db.ts                       # Database connection
+│   ├── storage.ts                  # Database queries
+│   ├── seed.ts                     # Database seeding
+│   └── vite.ts                     # Dev server config
+├── 📁 shared/                      # Shared between client/server
+│   └── schema.ts                   # Database schema (Drizzle ORM)
+├── 📄 package.json                 # Dependencies & scripts
+├── 📄 tsconfig.json                # TypeScript configuration
+├── 📄 tailwind.config.ts           # Tailwind CSS config
+├── 📄 drizzle.config.ts            # Database ORM config
+└── 📄 vite.config.ts               # Build tool config
