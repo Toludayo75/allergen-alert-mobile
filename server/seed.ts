@@ -65,6 +65,27 @@ async function createTables() {
       FOREIGN KEY (alternative_id) REFERENCES products(id) ON DELETE CASCADE
     );
   `);
+  
+    await db.execute(`
+    CREATE TABLE IF NOT EXISTS search_history (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      user_id INT NOT NULL,
+      product_id INT NOT NULL,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+      FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+      FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
+    );
+  `);
+
+  await db.execute(`
+    CREATE TABLE IF NOT EXISTS user_allergens (
+      user_id INT NOT NULL,
+      allergen_id INT NOT NULL,
+      PRIMARY KEY (user_id, allergen_id),
+      FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+      FOREIGN KEY (allergen_id) REFERENCES allergens(id) ON DELETE CASCADE
+    );
+  `);
 }
 
 const adminUser = {
