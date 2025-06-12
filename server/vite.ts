@@ -20,11 +20,11 @@ export function log(message: string, source = "express") {
 }
 
 export async function setupVite(app: Express, server: Server) {
-  const serverOptions = {
-    middlewareMode: true,
-    hmr: { server },
-    allowedHosts: true,
-  };
+const serverOptions = {
+  middlewareMode: true,
+  hmr: { server },
+  allowedHosts: true as true,  // type assertion fixes the error
+};
 
   const vite = await createViteServer({
     ...viteConfig,
