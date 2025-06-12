@@ -117,5 +117,14 @@ async function seedData() {
   }
 }
 
+// Key Addition: Env Check + Execution
+if (process.env.SEED_DATABASE === "true") {
+  seedDatabase()
+    .catch((e) => {
+      console.error("❌ Seeding failed:", e);
+      process.exit(1);
+    });
+}
+
 // Run the seed function
 seedData();

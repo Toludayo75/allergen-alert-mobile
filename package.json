@@ -12,7 +12,7 @@
     "build": "npm run build:client && npm run build:server",
     "start": "NODE_ENV=production node dist/index.js",
     "check": "tsc",
-    "db:seed": "cross-env DATABASE_URL=mysql://ayo:%23Ayomide2005@localhost:3306/allergen_mobile tsx server/seed.ts",
+    "db:seed": "cross-env DATABASE_URL=mysql://root:XmoBusUHjqCrwDGcJpAtMTsJpGpLOBkc@mysql.railway.internal:3306/railway",
     "db:push": "drizzle-kit push"
   },
   "dependencies": {
